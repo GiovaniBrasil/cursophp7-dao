@@ -20,9 +20,15 @@ require_once("config.php");
 // $usuario->login("root", "!@#$%");
 //echo $usuario;
 
-$aluno = new Usuario("aluno", "@lun0");
-$aluno->insert();
+//Insere um novo usuário no banco
+// $aluno = new Usuario("aluno", "@lun0");
+// $aluno->insert();
 
-echo $aluno;
+// echo $aluno;
+
+$usuario = new Usuario();
+$usuario->loadById(5);
+$usuario->update("Professor", "pr0f3550r");
+echo $usuario;
 
 ?>
